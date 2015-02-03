@@ -1,11 +1,11 @@
 /**
  * @author LE BOULC'H Brice
- * @class Synchronise
- * @description Synchronise functions to execute one after the others
+ * @class Synchronize
+ * @description synchronize functions to execute one after the others
  */
 Synchronize = function() {
     /**
-     * List of currents functions to synchronise
+     * List of currents functions to synchronize
      * @type {Array}
      */
     this.functions = [];
