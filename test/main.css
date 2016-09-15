@@ -1,0 +1,39 @@
+html,body{
+	margin:0px;
+	padding:0px;
+}
+h1{
+	margin:0px;
+	padding:5px;
+}
+
+div.test{
+	float: left;
+	width:calc(50% - 22px);
+	margin:10px;
+	border:1px solid appworkspace;
+}
+
+div.test h2{
+	border-bottom:1px solid appworkspace;
+	margin:0px;
+	padding:2px;
+}
+
+div.test > div{
+	margin:5px;
+}
+div.test > div.info{
+	color:darkgrey;
+}
+
+div.test > div > span{
+	color:cornflowerblue;
+	margin-right:5px;
+}
+
+.pushFloat{
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
