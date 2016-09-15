@@ -5,8 +5,6 @@ Class to synchronize functions and ajax requests in javascript
 
 ### Exemple (with jquery)
 	var s = new Synchronize();
-		s.autostart = false;
-		s.waitNotification = true;
 	
 	console.log('Start');
 	
