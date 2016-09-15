@@ -29,7 +29,23 @@ describe('Basic methods', function(){
 		test.bool(spy.calledOnce).isTrue();
 	});
 
-	it('notify', function(){
+	it('stop', function(){
+		var s = new Synchronize();
+		var spy  = test.spy();
+		
+		
+		var id = s.push(function(){
+			spy();
+			s.stop();
+		});
+		
+		var id2 = s.push(function(){
+			spy();
+		});
+		
+		s.start();
+		
+		test.bool(spy.calledOnce).isTrue();
 	});
 });
 
