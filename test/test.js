@@ -51,7 +51,6 @@ class Logger
 
 Logger.countTest = 0;
 
-
 var min = 100,
 	max = 500,
 	tests = {
@@ -63,25 +62,22 @@ var min = 100,
 			s.waitNotification = false;
 			
 			var firstFunction = s.push(function(){
-				logger.log("First function start");
 				window.setTimeout(function(){
-					logger.log("First function end");
+					logger.log("First timeout");
 					s.notify(firstFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
 			
 			var secondFunction = s.push(function(){
-				logger.log("Second function start");
 				window.setTimeout(function(){
-					logger.log("Second function end");
+					logger.log("Second timeout");
 					s.notify(secondFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
 			
 			var thirdFunction = s.push(function(){
-				logger.log("Third function start");
 				window.setTimeout(function(){
-					logger.log("Third function end");
+					logger.log("Third timeout");
 					s.notify(thirdFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
@@ -94,25 +90,22 @@ var min = 100,
 			s.autostart = false;
 			
 			var firstFunction = s.push(function(){
-				logger.log("First function start");
 				window.setTimeout(function(){
-					logger.log("First function end");
+					logger.log("First timeout");
 					s.notify(firstFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
 			
 			var secondFunction = s.push(function(){
-				logger.log("Second function start");
 				window.setTimeout(function(){
-					logger.log("Second function end");
+					logger.log("Second timeout");
 					s.notify(secondFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
 			
 			var thirdFunction = s.push(function(){
-				logger.log("Third function start");
 				window.setTimeout(function(){
-					logger.log("Third function end");
+					logger.log("Third timeout");
 					s.notify(thirdFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
@@ -125,33 +118,29 @@ var min = 100,
 			var s = new Synchronize();
 			
 			var firstFunction = s.push(function(){
-				logger.log("First function start");
 				window.setTimeout(function(){
-					logger.log("First function end");
+					logger.log("First timeout");
 					s.notify(firstFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
 			
 			var thirdFunction = s.push(function(){
-				logger.log("Third function start");
 				window.setTimeout(function(){
-					logger.log("Third function end");
+					logger.log("Third timeout");
 					s.notify(thirdFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
 			
 			var secondFunction = s.when([firstFunction, thirdFunction], function(){
-				logger.log("Second function start");
 				window.setTimeout(function(){
-					logger.log("Second function end");
+					logger.log("Second timeout");
 					s.notify(secondFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
 			
 			var fourthFunction = s.push(function(){
-				logger.log("Fourth function start");
 				window.setTimeout(function(){
-					logger.log("Fourth function end");
+					logger.log("Fourth timeout");
 					s.notify(fourthFunction);
 				}, Math.floor(Math.random() * (max - min)) + min);
 			});
